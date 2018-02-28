@@ -1,0 +1,23 @@
+<form #monFormulaire="ngForm">
+
+  <label for="name">Name</label>
+  <input required class="form-control" type="text" id="name" name="name" [(ngModel)]="name">
+
+  <label for="firstname">Firstname</label>
+  <input required class="form-control" type="text" id="firstname" name="firstname" [(ngModel)]="firstname">
+
+  <label for="job">Job</label>
+  <input required class="form-control" type="text" id="job" name="job" [(ngModel)]="job">
+
+  <label for="path">Path</label>
+  <select required class="form-control" id="path" name="path" [(ngModel)]="path">
+    <option value=""></option>
+    <option value="rotating_card_profile.png">rotating_card_profile.png</option>
+    <option value="rotating_card_profile2.png">rotating_card_profile2.png</option>
+    <option value="rotating_card_profile3.png">rotating_card_profile3.png</option>
+  </select>
+
+  <button [disabled]="monFormulaire.invalid" class="btn btn-success" (click)="treatForm(monFormulaire)">Valider</button>
+
+</form>
+

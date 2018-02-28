@@ -1,0 +1,26 @@
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading"> <app-list (sendPersonne)="getPersonne($event)" ></app-list></div>
+    <div class="panel-body">
+      <button class="btn btn-info" (click)="addVisible()"> Ajouter </button></div>
+  </div>
+  <div *ngIf="add">
+  <div class="panel-footer">
+
+      <app-form-personne></app-form-personne></div></div>
+
+</div>
+
+  <div class="col-lg-7">
+    <div class="panel panel-default">
+    <app-cv-card *ngIf="personne" [selectedPersonne]="personne"></app-cv-card>
+  </div>
+  <button class="btn btn-info" (click)="saveData()">Save Data</button></div></div>
+<div class="row">
+
+  <app-embauched-cv></app-embauched-cv>
+
+</div>
+

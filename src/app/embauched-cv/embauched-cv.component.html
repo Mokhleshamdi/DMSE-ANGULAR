@@ -1,0 +1,13 @@
+<h3 *ngIf="mesPeronnesAEmbaucher.length>0">Les Embauchés</h3>
+
+<div class="row mb-25" *ngIf="mesPeronnesAEmbaucher.length>0">
+  <div class="col-md-3 col-sm-6" *ngFor="let personne of mesPeronnesAEmbaucher">
+    <div class="card">
+      <img src="assets/images/{{personne.path}}" alt="Avatar" style="width:100%">
+      <div class="content">
+        <h4><b>{{personne.name}} {{personne.firstname}}</b></h4>
+        <p>{{personne.job}}</p>
+      </div>
+    </div>
+  </div>
+</div>

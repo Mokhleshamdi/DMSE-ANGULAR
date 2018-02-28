@@ -1,0 +1,23 @@
+
+
+<!--<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBwfiPxcSPmg7fJ4VusKoFOv2_TjdxQBa4",
+    authDomain: "dmse-83d8f.firebaseapp.com",
+    databaseURL: "https://dmse-83d8f.firebaseio.com",
+    projectId: "dmse-83d8f",
+    storageBucket: "",
+    messagingSenderId: "443161496326"
+  };
+  firebase.initializeApp(config);
+</script>-->
+
+<div class="row mb-25" *ngIf="posts.length>0">
+  <div class="col-md-3 col-sm-6" *ngFor="let mesPosts of posts">
+    <div class=" panel panel-default">
+    <h5>{{mesPosts.title|json}}</h5>
+        <h4><b>{{mesPosts.userId|json}} {{mesPosts.id|json}}</b></h4>
+
+      </div>
